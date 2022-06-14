@@ -1,0 +1,51 @@
+{% extends 'base-main.html' %}
+
+{% load static %}
+
+{% block content %}
+<body class="tg-comingsoonpage">
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-push-1 col-md-10 col-lg-push-2 col-lg-8">
+						<div id="tg-content" class="tg-content">
+							<div class="tg-comingsooncontent">
+								<div class="tg-logobox">
+									<strong class="tg-logo"><a href="javascript:void(0);"><img src="{% static 'images/logol.png' %}" alt="image description"></a></strong>
+								</div>
+								<div id="tg-comingsooncounter" class="tg-comingsooncounter"></div>
+								<div class="tg-textbox">
+									<h5>Stay Tuned<span>We Are Coming Very Soon!</span></h5>
+									<div class="tg-description">
+										<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore etae magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									</div>
+									<div class="tg-btns">
+										<a class="tg-btn tg-btnnotifyme" href="javascript:void(0);">Notify Me</a>
+										<a class="tg-btn tg-btnaboutus" href="javascript:void(0);">About Us</a>
+									</div>
+								</div>
+								<span class="tg-copyright">2017 All Rights Reserved © Classified PRO</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+{% endblock %}

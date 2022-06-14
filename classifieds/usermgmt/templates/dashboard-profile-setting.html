@@ -1,0 +1,187 @@
+{% extends 'base-dashboard.html' %}
+
+{% load static %}
+
+{% block content %}
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-haslayout">
+			<!--************************************
+					Section Start
+			*************************************-->
+			<section class="tg-dbsectionspace tg-haslayout">
+				<div class="row">
+					<form class="tg-formtheme tg-formdashboard">
+						<fieldset>
+							<!--************************************
+									Activity Start
+							*************************************-->
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 tg-lgcolwidthhalf">
+								<div class="tg-dashboardbox">
+									<div class="tg-dashboardboxtitle">
+										<h2>Profile Photo</h2>
+									</div>
+									<div class="tg-dashboardholder">
+										<label class="tg-fileuploadlabel" for="tg-photogallery">
+											<span>Drop files anywhere to upload</span>
+											<span>Or</span>
+											<span class="tg-btn">Select Files</span>
+											<span>Maximum upload file size: 500 KB</span>
+											<input id="tg-photogallery" class="tg-fileinput" type="file" name="file">
+										</label>
+										<div class="tg-horizontalthemescrollbar tg-profilephotogallery">
+											<ul>
+												<li>
+													<figure>
+														<img src="{% static 'images/thumbnail/img-01.jpg' %}" alt="image description">
+														<i class="icon-trash"></i>
+													</figure>
+												</li>
+												<li>
+													<figure class="tg-activephoto">
+														<img src="{% static 'images/thumbnail/img-02.jpg' %}" alt="image description">
+														<i class="fa fa-check-square-o"></i>
+													</figure>
+												</li>
+												<li>
+													<figure>
+														<img src="{% static 'images/thumbnail/img-02.jpg' %}" alt="image description">
+														<i class="icon-trash"></i>
+													</figure>
+												</li>
+												<li>
+													<figure>
+														<img src="{% static 'images/thumbnail/img-04.jpg' %}" alt="image description">
+														<i class="icon-trash"></i>
+													</figure>
+												</li>
+												<li>
+													<figure>
+														<img src="{% static 'images/thumbnail/img-05.jpg' %}" alt="image description">
+														<i class="icon-trash"></i>
+													</figure>
+												</li>
+												<li>
+													<figure>
+														<img src="{% static 'images/thumbnail/img-01.jpg' %}" alt="image description">
+														<i class="icon-trash"></i>
+													</figure>
+												</li>
+												<li>
+													<figure>
+														<img src="{% static 'images/thumbnail/img-02.jpg' %}" alt="image description">
+														<i class="icon-trash"></i>
+													</figure>
+												</li>
+												<li>
+													<figure>
+														<img src="{% static 'images/thumbnail/img-02.jpg' %}" alt="image description">
+														<i class="icon-trash"></i>
+													</figure>
+												</li>
+												<li>
+													<figure>
+														<img src="{% static 'images/thumbnail/img-04.jpg' %}" alt="image description">
+														<i class="icon-trash"></i>
+													</figure>
+												</li>
+												<li>
+													<figure>
+														<img src="{% static 'images/thumbnail/img-05.jpg' %}" alt="image description">
+														<i class="icon-trash"></i>
+													</figure>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--************************************
+									Activity End
+							*************************************-->
+							<!--************************************
+									Approved Ads Start
+							*************************************-->
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 tg-lgcolwidthhalf">
+								<div class="tg-dashboardbox">
+									<div class="tg-dashboardboxtitle">
+										<h2>Profile Detail</h2>
+									</div>
+									<div class="tg-dashboardholder">
+										<div class="form-group">
+											<strong>I’m a:</strong>
+											<div class="tg-selectgroup">
+												<span class="tg-radio">
+													<input id="tg-mail" type="radio" name="gender" value="male" checked>
+													<label for="tg-mail">Male</label>
+												</span>
+												<span class="tg-radio">
+													<input id="tg-femail" type="radio" name="gender" value="female">
+													<label for="tg-femail">Female</label>
+												</span>
+												<span class="tg-radio">
+													<input id="tg-company" type="radio" name="gender" value="company">
+													<label for="tg-company">Company</label>
+												</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<input type="text" name="username" class="form-control" placeholder="Username">
+										</div>
+										<div class="form-group">
+											<input type="email" name="email" class="form-control" placeholder="Email*">
+										</div>
+										<div class="form-group">
+											<input type="text" name="firstname" class="form-control" placeholder="First Name*">
+										</div>
+										<div class="form-group">
+											<input type="text" name="lastname" class="form-control" placeholder="Last Name*">
+										</div>
+										<div class="form-group">
+											<input type="text" name="phonenumber" class="form-control" placeholder="Phone Number*">
+										</div>
+										<button class="tg-btn" type="button">Update</button>
+									</div>
+								</div>
+							</div>
+							<!--************************************
+									Approved Ads End
+							*************************************-->
+							<!--************************************
+									Approved Ads Start
+							*************************************-->
+							<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 tg-lgcolwidthhalf">
+								<div class="tg-dashboardbox">
+									<div class="tg-dashboardboxtitle">
+										<h2>Change Password</h2>
+									</div>
+									<div class="tg-dashboardholder">
+										<div class="form-group">
+											<input type="password" name="currentpassword" class="form-control" placeholder="Current Password">
+										</div>
+										<div class="form-group">
+											<input type="password" name="newpassword" class="form-control" placeholder="New Password">
+										</div>
+										<div class="form-group">
+											<input type="password" name="confirmpassword" class="form-control" placeholder="Confirm New Password">
+										</div>
+										<button class="tg-btn" type="button">Change Now</button>
+									</div>
+								</div>
+							</div>
+							<!--************************************
+									Approved Ads End
+							*************************************-->
+						</fieldset>
+					</form>
+				</div>
+			</section>
+			<!--************************************
+					Section End
+			*************************************-->
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+{% endblock %}

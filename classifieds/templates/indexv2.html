@@ -1,0 +1,389 @@
+{% extends 'base-homepage.html' %}
+
+{% load static %}
+
+{% block content %}
+		<!--************************************
+				Home Slider Start
+		*************************************-->
+		<div id="tg-homebanner" class="tg-homebanner tg-homebannervtwo tg-haslayout">
+			<figure class="item" data-vide-bg="poster: images/slider/img-01.jpg" data-vide-options="position: 50% 50%">
+				<figcaption>
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-push-2 col-lg-8">
+								<div class="tg-bannercontent">
+									<h1>World’s Largest Marketplace</h1>
+									{% if count == 1 %}
+										<h2>Search from {{ count }} Awesome Verified Ad!</h2>
+									{% else %}
+										<h2>Search from {{ count }} Awesome Verified Ads!</h2>
+									{% endif %}
+									<form class="tg-formtheme tg-formbannersearch">
+										<fieldset>
+											<div class="form-group tg-inputwithicon">
+												<i class="icon-bullhorn"></i>
+												<input type="text" name="customword" class="form-control" placeholder="What are you looking for">
+											</div>
+											<div class="form-group tg-inputwithicon">
+												<i class="icon-location"></i>
+												<a class="tg-btnsharelocation fa fa-crosshairs" href="javascript:void(0);"></a>
+												<input type="text" name="yourlocation" class="form-control" placeholder="Your Location">
+											</div>
+											<button class="tg-btn" type="button">Search Now</button>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</figcaption>
+			</figure>
+		</div>
+		<!--************************************
+				Home Slider End
+		*************************************-->
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-haslayout">
+			<div class="container">
+				<div class="row">
+					<div id="tg-twocolumns" class="tg-twocolumns">
+						<div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+							<div id="tg-content" class="tg-content">
+								<section class="tg-haslayout">
+									<div class="tg-sectionhead">
+										<div class="tg-title">
+											<h2>Search By Category</h2>
+										</div>
+										<div class="tg-description">
+											{% if count == 1 %}
+												<p>{{ count }} Active Ad</p>
+											{% else %}
+												<p>Over {{ count }} Active Ads</p>
+											{% endif %}
+										</div>
+									</div>
+									<div class="tg-haslayout">
+										<div class="tg-categories">
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-16.png' %}" alt="image description"></figure>
+													<h3>Mobiles</h3>
+													{% if mobiles == 1 %}
+														<h4>{{ mobiles }} Ad</h4>
+													{% else %}
+														<h4>{{ mobiles }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-17.png' %}" alt="image description"></figure>
+													<h3>Electronics</h3>
+													{% if electronics == 1 %}
+														<h4>{{ electronics }} Ad</h4>
+													{% else %}
+														<h4>{{ electronics }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-18.png' %}" alt="image description"></figure>
+													<h3>Vehicles</h3>
+													{% if vehicles == 1 %}
+														<h4>{{ vehicles }} Ad</h4>
+													{% else %}
+														<h4>{{ vehicles }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-19.png' %}" alt="image description"></figure>
+													<h3>Bikes</h3>
+													{% if bikes == 1 %}
+														<h4>{{ bikes }} Ad</h4>
+													{% else %}
+														<h4>{{ bikes }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-20.png' %}" alt="image description"></figure>
+													<h3>Animals</h3>
+													{% if animals == 1 %}
+														<h4>{{ animals }} Ad</h4>
+													{% else %}
+														<h4>{{ animals }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-21.png' %}" alt="image description"></figure>
+													<h3>Furniture</h3>
+													{% if furniture == 1 %}
+														<h4>{{ furniture }} Ad</h4>
+													{% else %}
+														<h4>{{ furniture }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-22.png' %}" alt="image description"></figure>
+													<h3>Services</h3>
+													{% if electronics == 1 %}
+														<h4>{{ electronics }} Ad</h4>
+													{% else %}
+														<h4>{{ electronics }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-23.png' %}" alt="image description"></figure>
+													<h3>Property</h3>
+													{% if property == 1 %}
+														<h4>{{ property }} Ad</h4>
+													{% else %}
+														<h4>{{ property }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-24.png' %}" alt="image description"></figure>
+													<h3>Jobs</h3>
+													{% if jobs == 1 %}
+														<h4>{{ jobs }} Ad</h4>
+													{% else %}
+														<h4>{{ jobs }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-25.png' %}" alt="image description"></figure>
+													<h3>Books and Sports</h3>
+													{% if books_sports == 1 %}
+														<h4>{{ books_sports }} Ad</h4>
+													{% else %}
+														<h4>{{ books_sports }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-26.png' %}" alt="image description"></figure>
+													<h3>Business</h3>
+													{% if business == 1 %}
+														<h4>{{ business }} Ad</h4>
+													{% else %}
+														<h4>{{ business }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-27.png' %}" alt="image description"></figure>
+													<h3>Kids and Toys</h3>
+													{% if kids_toys == 1 %}
+														<h4>{{ kids_toys }} Ad</h4>
+													{% else %}
+														<h4>{{ kids_toys }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-28.png' %}" alt="image description"></figure>
+													<h3>Fashion</h3>
+													{% if fashion == 1 %}
+														<h4>{{ fashion }} Ad</h4>
+													{% else %}
+														<h4>{{ fashion }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-29.png' %}" alt="image description"></figure>
+													<h3>Computers</h3>
+													{% if computers == 1 %}
+														<h4>{{ computers }} Ad</h4>
+													{% else %}
+														<h4>{{ computers }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+											<div class="tg-category">
+												<div class="tg-categoryholder">
+													<figure><img src="{% static 'images/icons/img-30.png' %}" alt="image description"></figure>
+													<h3>Misc</h3>
+													{% if misc == 1 %}
+														<h4>{{ misc }} Ad</h4>
+													{% else %}
+														<h4>{{ misc }} Ads</h4>
+													{% endif %}
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section class="tg-haslayout text-center">
+									<div class="tg-adbanner">
+										<img src="{% static 'images/adbanner/placeholder-02.jpg' %}" alt="image description">
+									</div>
+								</section>
+								<section class="tg-haslayout">
+									<div class="tg-title"><h2>Our Partners</h2></dvi>
+									<div class="tg-brands tg-brandsvtwo">
+										<figure><img src="{% static 'images/brands/img-05.png' %}" alt="image description"></figure>
+										<figure><img src="{% static 'images/brands/img-06.png' %}" alt="image description"></figure>
+										<figure><img src="{% static 'images/brands/img-07.png' %}" alt="image description"></figure>
+										<figure><img src="{% static 'images/brands/img-08.png' %}" alt="image description"></figure>
+										<figure><img src="{% static 'images/brands/img-09.png' %}" alt="image description"></figure>
+										<figure><img src="{% static 'images/brands/img-10.png' %}" alt="image description"></figure>
+										<figure><img src="{% static 'images/brands/img-11.png' %}" alt="image description"></figure>
+										<figure><img src="{% static 'images/brands/img-12.png' %}" alt="image description"></figure>
+										<figure><img src="{% static 'images/brands/img-13.png' %}" alt="image description"></figure>
+										<figure><img src="{% static 'images/brands/img-14.png' %}" alt="image description"></figure>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 col-lg-3">
+							<aside id="tg-sidebar" class="tg-sidebar">
+								<div class="tg-widget tg-widgetlatestad">
+									<div class="tg-sidebartitle"><h2>Latest Ads</h2></div>
+									<div class="tg-widgetcontent">
+										<div id="tg-latestadsslider" class="tg-latestadsslider owl-carousel">
+											<div class="item">
+												<div class="tg-ad tg-verifiedad">
+													<figure>
+														<span class="tg-themetag tg-featuretag">featured</span>
+														<a href="javascript:void(0);"><img src="{% static 'images/ads/img-01.jpg' %}" alt="image description"></a>
+														<span class="tg-photocount">See 18 Photos</span>
+													</figure>
+													<div class="tg-adcontent">
+														<ul class="tg-productcagegories">
+															<li><a href="javascript:void(0);">Mobiles</a></li>
+														</ul>
+														<div class="tg-adtitle">
+															<h3><a href="javascript:void(0);">Ei pad pro for sale</a></h3>
+														</div>
+														<time datetime="2017-06-06">Last Updated: 4 hours ago</time>
+														<div class="tg-adprice"><h4>$200</h4></div>
+														<address>44-46 abc Road, Manchester</address>
+														<div class="tg-phonelike">
+															<a class="tg-btnphone" href="javascript:void(0);">
+																<i class="icon-phone-handset"></i>
+																<span data-toggle="tooltip" data-placement="top" title="Show Phone No." data-last="0800 - 1234 - 562 - 6"><em>Show Phone No.</em></span>
+															</a>
+															<span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="tg-ad tg-verifiedad">
+													<figure>
+														<span class="tg-themetag tg-featuretag">featured</span>
+														<a href="javascript:void(0);"><img src="{% static 'images/ads/img-02.jpg' %}" alt="image description"></a>
+														<span class="tg-photocount">See 18 Photos</span>
+													</figure>
+													<div class="tg-adcontent">
+														<ul class="tg-productcagegories">
+															<li><a href="javascript:void(0);">Vehicles</a></li>
+														</ul>
+														<div class="tg-adtitle">
+															<h3><a href="javascript:void(0);">Classic car in low price</a></h3>
+														</div>
+														<time datetime="2017-06-06">Last Updated: 4 hours ago</time>
+														<div class="tg-adprice"><h4>on call</h4></div>
+														<address>44-46 abc Road, Manchester</address>
+														<div class="tg-phonelike">
+															<a class="tg-btnphone" href="javascript:void(0);">
+																<i class="icon-phone-handset"></i>
+																<span data-toggle="tooltip" data-placement="top" title="Show Phone No." data-last="0800 - 1234 - 562 - 6"><em>Show Phone No.</em></span>
+															</a>
+															<span class="tg-like"><i class="fa fa-heart"></i></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="tg-ad tg-verifiedad">
+													<figure>
+														<span class="tg-themetag tg-featuretag">featured</span>
+														<a href="javascript:void(0);"><img src="{% static 'images/ads/img-03.jpg' %}" alt="image description"></a>
+														<span class="tg-photocount">See 18 Photos</span>
+													</figure>
+													<div class="tg-adcontent">
+														<ul class="tg-productcagegories">
+															<li><a href="javascript:void(0);">Mobiles</a></li>
+														</ul>
+														<div class="tg-adtitle">
+															<h3><a href="javascript:void(0);">Set of 03 chairs</a></h3>
+														</div>
+														<time datetime="2017-06-06">Last Updated: 4 hours ago</time>
+														<div class="tg-adprice"><h4>$125</h4></div>
+														<address>44-46 abc Road, Manchester</address>
+														<div class="tg-phonelike">
+															<a class="tg-btnphone" href="javascript:void(0);">
+																<i class="icon-phone-handset"></i>
+																<span data-toggle="tooltip" data-placement="top" title="Show Phone No." data-last="0800 - 1234 - 562 - 6"><em>Show Phone No.</em></span>
+															</a>
+															<span class="tg-like tg-liked"><i class="fa fa-heart"></i></span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="item">
+												<div class="tg-ad tg-verifiedad">
+													<figure>
+														<span class="tg-themetag tg-featuretag">featured</span>
+														<a href="javascript:void(0);"><img src="{% static 'images/ads/img-04.jpg' %}" alt="image description"></a>
+														<span class="tg-photocount">See 18 Photos</span>
+													</figure>
+													<div class="tg-adcontent">
+														<ul class="tg-productcagegories">
+															<li><a href="javascript:void(0);">Furniture</a></li>
+														</ul>
+														<div class="tg-adtitle">
+															<h3><a href="javascript:void(0);">Smartphone for sale</a></h3>
+														</div>
+														<time datetime="2017-06-06">Last Updated: 4 hours ago</time>
+														<div class="tg-adprice"><h4>$160</h4></div>
+														<address>44-46 abc Road, Manchester</address>
+														<div class="tg-phonelike">
+															<a class="tg-btnphone" href="javascript:void(0);">
+																<i class="icon-phone-handset"></i>
+																<span data-toggle="tooltip" data-placement="top" title="Show Phone No." data-last="0800 - 1234 - 562 - 6"><em>Show Phone No.</em></span>
+															</a>
+															<span class="tg-like"><i class="fa fa-heart"></i></span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tg-widget tg-widgetadbanner">
+									<div class="tg-adbanner"><img src="{% static 'images/adbanner/placeholder-03.jpg' %}" alt="image description"></div>
+								</div>
+							</aside>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+{% endblock %}

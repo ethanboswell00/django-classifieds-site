@@ -1,0 +1,18 @@
+{% extends 'base-login.html' %}
+
+{% block login_form %}
+<form class="tg-formtheme tg-formloging" method="post" action="">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<fieldset>
+		<div class="form-group">
+			<div class="tg-checkbox">
+				<input id="tg-rememberme" type="checkbox" name="rememberme" value="rememberme">
+				<label for="tg-rememberme">Keep me logged in</label>
+			</div>
+			<a class="tg-forgetpassword" href="javascript:void(0);">Forgot Password?</a>
+		</div>
+		<button class="tg-btn" type="submit">Login</button>
+	</fieldset>
+</form>
+{% endblock %}

@@ -1,0 +1,290 @@
+{% load static %}
+
+<!doctype html>
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->	<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fleket Dashboard - {% block title %}{% endblock %}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<link rel="stylesheet" href="{% static 'css/transitions.css' %}">
+	<link rel="stylesheet" href="{% static 'css/flags.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+	<link rel="stylesheet" href="{% static 'css/scrollbar.css' %}">
+	<link rel="stylesheet" href="{% static 'css/chartist.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+	<link rel="stylesheet" href="{% static 'css/color.css' %}">
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	<link rel="stylesheet" href="{% static 'css/dbresponsive.css' %}">
+	<script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+</head>
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+		<!--************************************
+				Header Start
+		*************************************-->
+		<header id="tg-dashboardheader" class="tg-dashboardheader tg-haslayout">
+			<nav id="tg-nav" class="tg-nav">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-navigation" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
+					<ul>
+						<li class="menu-item-has-children">
+							<a href="javascript:void(0);">Home</a>
+							<ul class="sub-menu">
+								<li><a href="/">Home V1</a></li>
+								<li><a href="/alt">Home V2</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children current-menu-item">
+							<a href="javascript:void(0);">Listings</a>
+							<ul class="sub-menu">
+								<li><a href="/listings/ad-grid-list">Ad Grid</a></li>
+								<li><a href="/listings/ad-list">Ad Listing</a></li>
+								<li><a href="/listings/ad-details">Listing Detail</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="javascript:void(0);">Dashboard</a>
+							<ul class="sub-menu">
+								<li><a href="/dashboard">Dashboard</a></li>
+								<li><a href="/dashboard/my-ads">Dashboard My Ads</a></li>
+								<li><a href="/dashboard/my-favorites">Dashboard Favorites</a></li>
+								<li><a href="/dashboard/offer-messages">Dashboard Offer Message</a></li>
+								<li><a href="/dashboard/payments">Dashboard Payment</a></li>
+								<li><a href="/dashboard/post-ad">Dashboard Post Ad</a></li>
+								<li><a href="/dashboard/privacy-settings">Dashboard privacy Setting</a></li>
+								<li><a href="/dashboard/profile-settings">Dashboard Profile Setting</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children">
+							<a href="javascript:void(0);">Pages</a>
+							<ul class="sub-menu">
+								<li><a href="/about-us">About</a></li>
+								<li><a href="/contact-us">Contact Us</a></li>
+								<li><a href="/error">404 Error</a></li>
+								<li><a href="/coming-soon">Coming Soon</a></li>
+								<li><a href="/packages">Packages</a></li>
+								<li><a href="/signup">Login/Register</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="tg-rghtbox">
+				<a class="tg-btn" href="/dashboard/post-ad">
+					<i class="icon-bookmark"></i>
+					<span>post an ad</span>
+				</a>
+				<div class="dropdown tg-themedropdown tg-notification">
+					<button class="tg-btndropdown" id="tg-notificationdropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="icon-alarm"></i>
+						<span class="tg-badge">9</span>
+					</button>
+					<ul class="dropdown-menu tg-dropdownmenu" aria-labelledby="tg-notificationdropdown">
+						<li><p>Consectetur adipisicing sedi eiusmod ampore incididunt ut labore et dolore.</p></li>
+						<li><p>Consectetur adipisicing sedi eiusmod ampore incididunt ut labore et dolore.</p></li>
+						<li><p>Consectetur adipisicing sedi eiusmod ampore incididunt ut labore et dolore.</p></li>
+						<li><p>Consectetur adipisicing sedi eiusmod ampore incididunt ut labore et dolore.</p></li>
+						<li><p>Consectetur adipisicing sedi eiusmod ampore incididunt ut labore et dolore.</p></li>
+						<li><p>Consectetur adipisicing sedi eiusmod ampore incididunt ut labore et dolore.</p></li>
+					</ul>
+				</div>
+			</div>
+			<div id="tg-sidebarwrapper" class="tg-sidebarwrapper">
+				<span id="tg-btnmenutoggle" class="tg-btnmenutoggle">
+					<i class="fa fa-angle-left"></i>
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="67" viewBox="0 0 20 67">
+						<metadata>
+							<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+								<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01">
+									<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+										<rdf:Description rdf:about=""/>
+									</rdf:RDF>
+								</x:xmpmeta>
+							<?xpacket end="w"?>
+						</metadata>
+						<path id="bg" class="cls-1" d="M20,27.652V39.4C20,52.007,0,54.728,0,67.265,0,106.515.026-39.528,0-.216-0.008,12.32,20,15.042,20,27.652Z"/>
+					</svg>
+				</span>
+				<div id="tg-verticalscrollbar" class="tg-verticalscrollbar">
+					<strong class="tg-logo"><a href="javascript:void(0);"><img src="{% static 'images/logod.png' %}" alt="image description"></a></strong>
+					<div class="tg-user">
+						<figure>
+							<span class="tg-bolticon"><i class="fa fa-bolt"></i></span>
+							<a href="javascript:void(0);"><img src="{% static 'images/author/img-07.jpg' %}" alt="image description"></a>
+						</figure>
+						<div class="tg-usercontent">
+							<h3>Hi! {{ user.username|title }}</h3>
+							{% block ifelse %}
+							{% if user.is_superuser %}
+								<h4>Admin</h4>
+							{% else %}
+								<h4>User</h4>
+							{% endif %}
+							{% endblock %}
+						</div>
+						<a class="tg-btnedit" href="javascript:void(0);"><i class="icon-pencil"></i></a>
+					</div>
+					<nav id="tg-navdashboard" class="tg-navdashboard">
+						<ul>
+							<li class="tg-active">
+								<a href="/dashboard">
+									<i class="icon-chart-bars"></i>
+									<span> Insights</span>
+								</a>
+							</li>
+							<li>
+								<a href="/dashboard/profile-settings">
+									<i class="icon-cog"></i>
+									<span>Profile Settings</span>
+								</a>
+							</li>
+							<li class="menu-item-has-children">
+								<a href="javascript:void(0);">
+									<i class="icon-layers"></i>
+									<span>My Ads</span>
+								</a>
+								<ul class="sub-menu">
+									<li><a href="/dashboard/my-ads">All Ads</a></li>
+									<li><a href="/dashboard/my-ads">Featured Ads</a></li>
+									<li><a href="/dashboard/my-ads">Active Ads</a></li>
+									<li><a href="/dashboard/my-ads">Inactive Ads</a></li>
+									<li><a href="/dashboard/my-ads">Sold Ads</a></li>
+									<li><a href="/dashboard/my-ads">Expired Ads</a></li>
+									<li><a href="/dashboard/my-ads">Deleted Ads</a></li>
+								</ul>
+							</li>
+							<li class="menu-item-has-children">
+								<a href="javascript:void(0);">
+									<i class="icon-envelope"></i>
+									<span>Offers/Messages</span>
+								</a>
+								<ul class="sub-menu">
+									<li><a href="/dashboard/offer-messages">Offer Received</a></li>
+									<li><a href="/dashboard/offer-messages">Offer Sent</a></li>
+									<li><a href="/dashboard/offer-messages">Trash</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="/dashboard/payments">
+									<i class="icon-cart"></i>
+									<span>Payments</span>
+								</a>
+							</li>
+							<li>
+								<a href="/dashboard/my-favorites">
+									<i class="icon-heart"></i>
+									<span>My Favourites</span>
+								</a>
+							</li>
+							<li>
+								<a href="/dashboard/privacy-settings">
+									<i class="icon-star"></i>
+									<span>Privacy Settings</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<i class="icon-exit"></i>
+									<span>Logout</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="tg-socialandappicons">
+						<ul class="tg-socialicons">
+							<li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+							<li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+							<li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+						<ul class="tg-appstoreicons">
+							<li><a href="javascript:void"><img src="{% static 'images/icons/app-01.png' %}" alt="image description"></a></li>
+							<li><a href="javascript:void"><img src="{% static 'images/icons/app-02.png' %}" alt="image description"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--************************************
+				Header End
+		*************************************-->
+		<!--************************************
+				Dashboard Banner Start
+		*************************************-->
+		<div class="tg-dashboardbanner">
+			<h1>Dashboard</h1>
+			<ol class="tg-breadcrumb">
+				<li><a href="javascript:void(0);">Main</a></li>
+				<li class="tg-active">Dashboard</li>
+			</ol>
+		</div>
+		<!--************************************
+				Dashboard Banner End
+		*************************************-->
+		{% block content %}
+		{% endblock %}
+		<!--************************************
+				Footer Start
+		*************************************-->
+		<footer id="tg-footer" class="tg-footer tg-haslayout">
+			<nav class="tg-footernav">
+				<ul>
+					<li><a href="javascript:void(0);">Listing Policy</a></li>
+					<li><a href="javascript:void(0);">Terms of Use</a></li>
+					<li><a href="javascript:void(0);">Privacy Policy</a></li>
+				</ul>
+			</nav>
+			<span class="tg-copyright">2017 All Rights Reserved &copy; Classified PRO</span>
+		</footer>
+		<!--************************************
+				Footer End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+	<script src="{% static 'js/vendor/jquery-library.js' %}"></script>
+	<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+	<script src="http://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&language=en"></script>
+	<script src="{% static 'js/tinymce/tinymce.min.js?apiKey=4cuu2crphif3fuls3yb1pe4qrun9pkq99vltezv2lv6sogci"></script>
+	<script src="{% static 'js/responsivethumbnailgallery.js' %}"></script>
+	<script src="{% static 'js/jquery.flagstrap.min.js' %}"></script>
+	<script src="{% static 'js/backgroundstretch.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery.vide.min.js' %}"></script>
+	<script src="{% static 'js/jquery.collapse.js' %}"></script>
+	<script src="{% static 'js/scrollbar.min.js' %}"></script>
+	<script src="{% static 'js/chartist.min.js' %}"></script>
+	<script src="{% static 'js/prettyPhoto.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.js' %}"></script>
+	<script src="{% static 'js/countTo.js' %}"></script>
+	<script src="{% static 'js/appear.js' %}"></script>
+	<script src="{% static 'js/gmap3.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

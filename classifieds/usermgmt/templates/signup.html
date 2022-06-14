@@ -1,0 +1,29 @@
+{% extends 'base-login.html' %}
+
+{% block signup_form %}	
+<form class="tg-formtheme tg-formregister" action="" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<fieldset>
+		<!--<div class="form-group tg-inputwithicon">
+			<i class="icon-envelope"></i>
+			<input type="email" name="email" class="form-control" placeholder="Email*">
+		</div>
+		<div class="form-group tg-inputwithicon">
+			<i class="icon-lock"></i>
+			<input type="password" name="password" class="form-control" placeholder="Password*">
+		</div>
+		<div class="form-group tg-inputwithicon">
+			<i class="icon-lock"></i>
+			<input type="password" name="retypepassword" class="form-control" placeholder="Retype Password*">
+		</div>-->
+		<div class="form-group">
+			<div class="tg-checkbox">
+				<input id="tg-agree" type="checkbox" name="agree" value="agree">
+				<label for="tg-agree">By registering, you accept our <a href="javascript:void(0);">Terms &amp; Conditions</a></label>
+			</div>
+		</div>
+		<button class="tg-btn" type="button">Register</button>
+	</fieldset>
+</form>
+{% endblock %}

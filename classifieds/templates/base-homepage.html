@@ -1,0 +1,361 @@
+{% load static %}
+
+<!doctype html>
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->	<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fleket - {% block title %}{% endblock title %}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<link rel="stylesheet" href="{% static 'css/transitions.css' %}">
+	<link rel="stylesheet" href="{% static 'css/flags.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+	<link rel="stylesheet" href="{% static 'css/scrollbar.css' %}">
+	<link rel="stylesheet" href="{% static 'css/chartist.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/color.css' %}">
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	<script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+</head>
+<body class="tg-home tg-homeone">
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<!--************************************
+			Wrapper Start
+	*************************************-->
+	<div id="tg-wrapper" class="tg-wrapper tg-haslayout">
+		<!--************************************
+				Header Start
+		*************************************-->
+		<header id="tg-header" class="tg-header tg-haslayout">
+			<div class="tg-navigationarea">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<a class="tg-btn" href="dashboard-postanad.html">
+								<i class="icon-bookmark"></i>
+								<span>post an ad</span>
+							</a>
+							<div class="dropdown tg-themedropdown tg-userdropdown">
+								<a href="javascript:void(0);" id="tg-adminnav" class="tg-btndropdown" data-toggle="dropdown">
+									<span class="tg-userdp"><img src="{% static 'images/author/img-01.jpg' %}" alt="image description"></span>
+									{% block ifelse_one %}
+									{% if user.is_authenticated %}
+										<span class="tg-name">Hi! {{ user.username|title }}</span>
+									{% else %}
+										<span class="tg-name">You are not logged in.</span>
+									{% endif %}
+									{% endblock %}
+
+									{% block ifelse_two %}
+									{% if user.is_superuser %}
+										<span class="tg-role">Admin</span>
+									{% else %}
+										<span class="tg-role">User</span>
+									{% endif %}
+									{% endblock %}
+								</a>
+								<ul class="dropdown-menu tg-themedropdownmenu" aria-labelledby="tg-adminnav">
+									<li>
+										<a href="/dashboard">
+											<i class="icon-chart-bars"></i>
+											<span>Insights</span>
+										</a>
+									</li>
+									<li>
+										<a href="/dashboard/profile-settings">
+											<i class="icon-cog"></i>
+											<span>Profile Settings</span>
+										</a>
+									</li>
+									<li class="menu-item-has-children">
+										<a href="javascript:void(0);">
+											<i class="icon-layers"></i>
+											<span>My Ads</span>
+										</a>
+										<ul>
+											<li><a href="/dashboard/my-ads">All Ads</a></li>
+											<li><a href="/dashboard/my-ads">Featured Ads</a></li>
+											<li><a href="/dashboard/my-ads">Active Ads</a></li>
+											<li><a href="/dashboard/my-ads">Inactive Ads</a></li>
+											<li><a href="/dashboard/my-ads">Sold Ads</a></li>
+											<li><a href="/dashboard/my-ads">Expired Ads</a></li>
+											<li><a href="/dashboard/my-ads">Deleted Ads</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="/dashboard/post-ad">
+											<i class="icon-layers"></i>
+											<span>Dashboard Post Ad</span>
+										</a>
+									</li>
+									<li class="menu-item-has-children">
+										<a href="javascript:void(0);">
+											<i class="icon-envelope"></i>
+											<span>Offers/Messages</span>
+										</a>
+										<ul>
+											<li><a href="/dashboard/offer-messages">Offer Received</a></li>
+											<li><a href="/dashboard/offer-messages">Offer Sent</a></li>
+											<li><a href="/dashboard/offer-messages">Trash</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="/dashboard/payments">
+											<i class="icon-cart"></i>
+											<span>Payments</span>
+										</a>
+									</li>
+									<li>
+										<a href="/dashboard/my-favorites">
+											<i class="icon-heart"></i>
+											<span>My Favourite</span>
+										</a>
+									</li>
+									<li>
+										<a href="/dashboard/privacy-settings">
+											<i class="icon-star"></i>
+											<span>Privacy Settings</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											<i class="icon-exit"></i>
+											<span>Logout</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<nav id="tg-nav" class="tg-nav">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-navigation" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								<!--<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
+									<ul>
+										<li class="menu-item-has-children">
+											<a href="javascript:void(0);">Home</a>
+											<ul class="sub-menu">
+												<li><a href="/">Home V1</a></li>
+												<li><a href="alt">Home V2</a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children current-menu-item">
+											<a href="javascript:void(0);">Listings</a>
+											<ul class="sub-menu">
+												<li><a href="ad-listing-grid">Ad Grid</a></li>
+												<li><a href="ad-listing-list">Ad Listing</a></li>
+												<li><a href="ad-detail">Listing Detail</a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="javascript:void(0);">Dashboard</a>
+											<ul class="sub-menu">
+												<li><a href="dashboard">Dashboard</a></li>
+												<li><a href="dashboard-myads">Dashboard My Ads</a></li>
+												<li><a href="dashboard-myfavourites">Dashboard Favorites</a></li>
+												<li><a href="dashboard-offermessages">Dashboard Offer Message</a></li>
+												<li><a href="dashboard-payments">Dashboard Payment</a></li>
+												<li><a href="dashboard-postanad">Dashboard Post Ad</a></li>
+												<li><a href="dashboard-privacy-setting">Dashboard privacy Setting</a></li>
+												<li><a href="dashboard-profile-setting">Dashboard Profile Setting</a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children">
+											<a href="javascript:void(0);">Pages</a>
+											<ul class="sub-menu">
+												<li><a href="/about-us">About</a></li>
+												<li><a href="/contact-us">Contact Us</a></li>
+												<li class="menu-item-has-children">
+													<a href="javascript:void(0);">News</a>
+													<ul class="sub-menu">
+														<li><a href="/news-grid">News grid</a></li>
+														<li><a href="/news-list">News list</a></li>
+														<li><a href="/news-detail">News detail</a></li>
+													</ul>
+												</li>
+												<li><a href="/404error">404 Error</a></li>
+												<li><a href="/comingsoon">Coming Soon</a></li>
+												<li><a href="/packages">Packages</a></li>
+												<li><a href="/signup">Login/Register</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>-->
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--************************************
+				Header End
+		*************************************-->
+		{% block content %}
+		{% endblock %}
+		<!--************************************
+				Footer Start
+		*************************************-->
+		<footer id="tg-footer" class="tg-footer tg-haslayout">
+			<div class="tg-footerbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-push-1 col-lg-10">
+							<div class="tg-newsletter">
+								<h2>Signup For Newsletter:</h2>
+								<form class="tg-formtheme tg-formnewsletter">
+									<fieldset>
+										<i class="icon-envelope"></i>
+										<input type="email" name="email" class="form-control" placeholder="Enter your email here">
+										<button type="button">Signup Now</button>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="container">
+				<div class="row">
+					<div class="tg-footerinfo">
+						<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+							<div class="tg-widget tg-widgettext">
+								<div class="tg-widgetcontent">
+									<strong class="tg-logo"><a href="javascript:void(0);"><img src="{% static 'images/logo.png' %}" alt="image description"></a></strong>
+									<div class="tg-description">
+										<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua anii ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo aute irurel in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+									</div>
+									<div class="tg-followus">
+										<strong>Follow Us:</strong>
+										<ul class="tg-socialicons">
+											<li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+											<li class="tg-twitter"><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+											<li class="tg-linkedin"><a href="javascript:void(0);"><i class="fa fa-linkedin"></i></a></li>
+										</ul>
+										<ul class="tg-appsnav">
+											<li><a href="javascript:void(0);"><img src="{% static 'images/apps-01.png' %}" alt="image description"></a></li>
+											<li><a href="javascript:void(0);"><img src="{% static 'images/apps-02.png' %}" alt="image description"></a></li>
+										</ul>
+									</div>
+									<nav class="tg-footernav">
+										<ul>
+											<li><a href="javascript:void(0);">Listing Policy</a></li>
+											<li><a href="javascript:void(0);">Terms of Use</a></li>
+											<li><a href="javascript:void(0);">Privacy Policy</a></li>
+										</ul>
+									</nav>
+									<span class="tg-copyright">2018 All Rights Reserved &copy; Classified PRO</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--************************************
+				Footer End
+		*************************************-->
+	</div>
+	<!--************************************
+			Wrapper End
+	*************************************-->
+	<!--************************************
+			Theme Modal Box Start
+	*************************************-->
+	<div id="tg-modalselectcurrency" class="modal fade tg-thememodal tg-modalselectcurrency" tabindex="-1" role="dialog">
+		<div class="modal-dialog tg-thememodaldialog" role="document">
+			<button type="button" class="tg-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<div class="modal-content tg-thememodalcontent">
+				<div class="tg-title">
+					<strong>Change Currency</strong>
+				</div>
+				<form class="tg-formtheme tg-formselectcurency">
+					<fieldset>
+						<div class="form-group">
+							<div id="tg-flagstrapone" class="tg-flagstrap" data-input-name="country"></div>
+						</div>
+						<div class="form-group">
+							<button class="tg-btn" type="button">Change Now</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="tg-modalpriceconverter" class="modal fade tg-thememodal tg-modalpriceconverter" tabindex="-1" role="dialog">
+		<div class="modal-dialog tg-thememodaldialog" role="document">
+			<button type="button" class="tg-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<div class="modal-content tg-thememodalcontent">
+				<div class="tg-title">
+					<strong>Currency Converter</strong>
+				</div>
+				<form class="tg-formtheme tg-formcurencyconverter">
+					<fieldset>
+						<div class="form-group">
+							<div id="tg-flagstraptwo" class="tg-flagstrap" data-input-name="country"></div>
+							<div class="tg-curencyrateetc">
+								<span>120<sup>$</sup></span>
+								<p>1 USD = 0.784769 GBP</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<span class="tg-iconseprator"><i><img src="{% static 'images/icons/img-36.png' %}" alt="image description"></i></span>
+						</div>
+						<div class="form-group">
+							<div id="tg-flagstrapthree" class="tg-flagstrap" data-input-name="country"></div>
+							<div class="tg-curencyrateetc">
+								<span>94.1723<sup>£</sup></span>
+								<p>1 GBP = 1.27426 USD</p>
+							</div>
+						</div>
+						<div class="form-group">
+							<span class="tg-lastupdate">Last update on <time datetime="2017-08-08">2017-06-12 12:35 local time</time></span>
+						</div>
+						<div class="form-group">
+							<button class="tg-btn" type="button">Convert Now</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--************************************
+			Theme Modal Box End
+	*************************************-->
+	<script src="{% static 'js/vendor/jquery-library.js' %}"></script>
+	<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+	<script src="http://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&language=en"></script>
+	<script src="{% static 'js/tinymce/tinymce.min.js?apiKey=4cuu2crphif3fuls3yb1pe4qrun9pkq99vltezv2lv6sogci' %}"></script>
+	<script src="{% static 'js/responsivethumbnailgallery.js' %}"></script>
+	<script src="{% static 'js/jquery.flagstrap.min.js' %}"></script>
+	<script src="{% static 'js/backgroundstretch.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery.vide.min.js' %}"></script>
+	<script src="{% static 'js/jquery.collapse.js' %}"></script>
+	<script src="{% static 'js/scrollbar.min.js' %}"></script>
+	<script src="{% static 'js/chartist.min.js' %}"></script>
+	<script src="{% static 'js/prettyPhoto.js' %}"></script>
+	<script src="{% static 'js/jquery-ui.js' %}"></script>
+	<script src="{% static 'js/countTo.js' %}"></script>
+	<script src="{% static 'js/appear.js' %}"></script>
+	<script src="{% static 'js/gmap3.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

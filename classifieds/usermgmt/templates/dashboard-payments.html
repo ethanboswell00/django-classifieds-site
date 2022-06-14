@@ -1,0 +1,330 @@
+{% extends 'base-dashboard.html' %}
+
+{% block content %}
+		<!--************************************
+				Main Start
+		*************************************-->
+		<main id="tg-main" class="tg-main tg-haslayout">
+			<!--************************************
+					Section Start
+			*************************************-->
+			<section class="tg-dbsectionspace tg-haslayout">
+				<div class="row">
+					<form class="tg-formtheme tg-formdashboard">
+						<fieldset>
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+								<div class="tg-dashboardbox">
+									<div class="tg-dashboardboxtitle">
+										<h2>Current Package Expiry</h2>
+									</div>
+									<div class="tg-dashboardholder">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+												<div class="tg-expirynote">
+													<div class="tg-description">
+														<p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua enim ad minim veniam querud exercitation ullamco laboris nisi uteai aliquip comedo equatea irure dolor in reprehenderit inta volupate.</p>
+													</div>
+													<div class="tg-btns">
+														<a class="tg-btn tg-btnrenew" href="javascript:void(0);">Renew Now</a>
+														<a class="tg-btn tg-btnallpackages" href="javascript:void(0);">All Packages</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+												<div id="tg-pkgexpirycounter" class="tg-pkgexpirycounter"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tg-dashboardbox">
+									<div class="tg-dashboardboxtitle">
+										<h2>Payments</h2>
+									</div>
+									<div class="tg-dashboardholder">
+										<nav class="tg-navtabledata">
+											<ul>
+												<li class="tg-active"><a href="*">All Packages (50)</a></li>
+												<li><a href="javascript:void(0);" data-category="packageone">Package 01 (12)</a></li>
+												<li><a href="javascript:void(0);" data-category="packagetwo">Package 02 (42)</a></li>
+												<li><a href="javascript:void(0);" data-category="packagethree">Package 03 (03)</a></li>
+											</ul>
+										</nav>
+										<div class="tg-otherfilters">
+											<div class="row">
+												<div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 pull-left">
+													<div class="form-group tg-sortby">
+														<span>Sort by:</span>
+														<div class="tg-select">
+															<select>
+																<option>Most Recent</option>
+																<option>Most Recent</option>
+																<option>Most Recent</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 pull-right">
+													<div class="form-group tg-inputwithicon">
+														<i class="icon-magnifier"></i>
+														<input type="search" name="search" class="form-control" placeholder="Search Here">
+													</div>
+												</div>
+											</div>
+										</div>
+										<table id="tg-adstype" class="table tg-dashboardtable tg-payments">
+											<thead>
+												<tr>
+													<th>
+														<span class="tg-checkbox">
+															<input id="tg-checkedall" type="checkbox" name="myads" value="checkall">
+															<label for="tg-checkedall"></label>
+														</span>
+													</th>
+													<th>Package Title</th>
+													<th>Purchased Date</th>
+													<th>Amount</th>
+													<th>Expiry Date</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-category="packageone">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adone" type="checkbox" name="myads" value="myadone">
+															<label for="tg-adone"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Basic Package</h3>
+														<span>Invoice ID: mV3h8E8eyqnatMyh3fQy</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">Jun 27, 2017</time></td>
+													<td data-title="Amount"><h3>$0.00</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">Jul 27, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr data-category="packagetwo">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adtwo" type="checkbox" name="myads" value="myadtwo">
+															<label for="tg-adtwo"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Value Package</h3>
+														<span>Invoice ID: fnBmA5w5dHJ9sp8rf7ZQ</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">May 06, 2017</time></td>
+													<td data-title="Amount"><h3>$29.30</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">Jul 27, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr data-category="packagethree">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adthree" type="checkbox" name="myads" value="myadthree">
+															<label for="tg-adthree"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Basic Package</h3>
+														<span>Invoice ID: E6hdtBSx7QrqN3pG6mBH</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">Feb 27, 2017</time></td>
+													<td data-title="Amount"><h3>$0.00</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">May 27, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr data-category="packageone">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adfour" type="checkbox" name="myads" value="myadfour">
+															<label for="tg-adfour"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Plus Package</h3>
+														<span>Invoice ID: tBUBwRGwgArdUDpAa2wN</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">Jan 04, 2017</time></td>
+													<td data-title="Amount"><h3>$40.00</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">Feb 08, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr data-category="packagetwo">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adfive" type="checkbox" name="myads" value="myadfive">
+															<label for="tg-adfive"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Plus Package</h3>
+														<span>Invoice ID: eC7xsBy4QXUYZhPP6TJJ</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">May 06, 2017</time></td>
+													<td data-title="Amount"><h3>$40.00</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">Jul 27, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr data-category="packagethree">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adsix" type="checkbox" name="myads" value="myadsix">
+															<label for="tg-adsix"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Value Package</h3>
+														<span>Invoice ID: hRpvZfeQ9kMfxWmanwbG</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">May 06, 2017</time></td>
+													<td data-title="Amount"><h3>$29.30</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">May 27, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr data-category="packageone">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adseven" type="checkbox" name="myads" value="myadseven">
+															<label for="tg-adseven"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Basic Package</h3>
+														<span>Invoice ID: pFkan2jan4KMnx6dmr3u</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">Jun 27, 2017</time></td>
+													<td data-title="Amount"><h3>$0.00</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">Jun 05, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr data-category="packagetwo">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adeight" type="checkbox" name="myads" value="myadeight">
+															<label for="tg-adeight"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Basic Package</h3>
+														<span>Invoice ID: HrxvWPmA9E2rXbT2mcEA</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">May 06, 2017</time></td>
+													<td data-title="Amount"><h3>$0.00</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">Jul 27, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr data-category="packagethree">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adnine" type="checkbox" name="myads" value="myadnine">
+															<label for="tg-adnine"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Plus Package</h3>
+														<span>Invoice ID: j2VJ7j8n8kNADCVB9GEp</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">Jun 27, 2017</time></td>
+													<td data-title="Amount"><h3>$40.00</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">Jun 05, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr data-category="packageone">
+													<td>
+														<span class="tg-checkbox">
+															<input id="tg-adten" type="checkbox" name="myads" value="myadten">
+															<label for="tg-adten"></label>
+														</span>
+													</td>
+													<td data-title="Package Title">
+														<h3>Value Package</h3>
+														<span>Invoice ID: rhH2ZbfXGePj4en8ysdK</span>
+													</td>
+													<td data-title="Purchased Data"><time datetime="2011-08-08">Jan 04, 2017</time></td>
+													<td data-title="Amount"><h3>$29.30</h3></td>
+													<td data-title="Expiry Date"><time datetime="2011-08-08">May 27, 2017</time></td>
+													<td data-title="Action">
+														<div class="tg-btnsactions">
+															<a class="tg-btnaction tg-btnactionview" href="javascript:void(0);"><i class="fa fa-eye"></i></a>
+															<a class="tg-btnaction tg-btnactiondelete" href="javascript:void(0);"><i class="fa fa-trash"></i></a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<nav class="tg-pagination">
+											<ul>
+												<li class="tg-prevpage"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+												<li><a href="#">1</a></li>
+												<li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li class="tg-active"><a href="#">5</a></li>
+												<li>...</li>
+												<li><a href="#">10</a></li>
+												<li class="tg-nextpage"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</section>
+			<!--************************************
+					Section End
+			*************************************-->
+		</main>
+		<!--************************************
+				Main End
+		*************************************-->
+{% endblock %}
